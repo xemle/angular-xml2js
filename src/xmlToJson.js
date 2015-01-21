@@ -1,4 +1,4 @@
-angular.module('xemle.xml')
+angular.module('xml2js')
   .filter('xmlToJson', [
     function() {
 

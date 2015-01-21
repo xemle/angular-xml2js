@@ -6,7 +6,7 @@ dependency like X2JS.
 
 ## Installation
 
-    bower install --save angular-xemle-xml
+    bower install --save angular-xml2js
 
 ## XML JSON Example
 
@@ -22,7 +22,7 @@ For following XML document
       </a:prop>
     </a:propfind>
 
-the JSON object would be
+the javascript object would be converted to
 
     {
       'propfind': {
@@ -69,13 +69,13 @@ the JSON object would be
       }
     }
 
-So you can access the value of `getcontentlength` like `propfind.prop[1].getcontentlength.value`.
+You can access the value of `getcontentlength` like `propfind.prop[1].getcontentlength.value`.
 
 ## Text to XML Example
 
 Following example shows how to convert a xml response to XML document:
 
-    angular.module('app', ['xemle-xml'])
+    angular.module('app', ['xml2js'])
       .factory('service', [
         '$http',
         '$filter',
@@ -101,7 +101,7 @@ Following example shows how to convert a xml response to XML document:
 
 Following example shows how to convert a xml response to JSON object:
 
-    angular.module('app', ['xemle-xml'])
+    angular.module('app', ['xml2js'])
       .factory('service', [
         '$http',
         '$filter',
@@ -129,7 +129,7 @@ Following example shows how to convert a xml response to JSON object:
 
 ## Contribute
 
-- Fork github repository
+- [Fork](https://github.com/xemle/angular-xml2js/fork) github repository
 - Create a brunch
     - Fix a single bug
     - Write test
