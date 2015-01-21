@@ -1,7 +1,7 @@
 {
   "name": "angular-xml2js",
   "description": "Angular filters to convert text to xml and xml to javascript object. It uses DOMParser or Microsofts ActiveX DOM parser and has no dependencies but angular",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/angular-xml2js.js",
   "license": "MIT",
   "ignore": [
