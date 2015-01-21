@@ -1,4 +1,4 @@
-# Angular filter to convert text to XML to JSON
+# Angular filter to convert text to XML to Javascript
 
 This module provides `text2xml` and `xml2js` filters for Angular. It uses the
 browser's DOMParser (or XMLDOM ActiveX component in case of IE). There is no
