@@ -56,7 +56,7 @@ angular.module('xml2js')
 
       // based from http://davidwalsh.name/convert-xml-json
       // Changes XML to JSON
-      function xmlToJson(xml) {
+      function xmlToJs(xml) {
 
         // Create the return object
         var obj = {},
@@ -77,7 +77,7 @@ angular.module('xml2js')
             for (var j = 0; j < xml.attributes.length; j++) {
               attribute = xml.attributes.item(j);
 
-              obj[ATTRIBUTES_NAME][getNodeName(attribute)] = xmlToJson(attribute);
+              obj[ATTRIBUTES_NAME][getNodeName(attribute)] = xmlToJs(attribute);
             }
           }
         } else if (xml.nodeType === TEXT) { // text
@@ -91,14 +91,14 @@ angular.module('xml2js')
             name = getNodeName(item);
 
             if (angular.isUndefined(obj[name])) {
-              obj[name] = xmlToJson(item);
+              obj[name] = xmlToJs(item);
             } else {
               if (!angular.isArray(obj[name])) {
                 var old = obj[name];
                 obj[name] = [];
                 obj[name].push(old);
               }
-              obj[name].push(xmlToJson(item));
+              obj[name].push(xmlToJs(item));
             }
           }
         }
@@ -106,7 +106,7 @@ angular.module('xml2js')
       }
 
       return function(input) {
-        return xmlToJson(input);
+        return xmlToJs(input);
       };
     }
   ]);
