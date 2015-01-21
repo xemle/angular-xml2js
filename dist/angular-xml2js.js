@@ -1,5 +1,5 @@
 angular.module('xml2js', [])
-  .filter('textToXml', [
+  .filter('text2xml', [
     '$window',
     '$log',
     function($window, $log) {
@@ -38,7 +38,7 @@ angular.module('xml2js', [])
   ]);
 
 angular.module('xml2js')
-  .filter('xmlToJson', [
+  .filter('xml2js', [
     function() {
 
       // constants

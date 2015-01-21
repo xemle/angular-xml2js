@@ -1,26 +1,26 @@
 'use strict';
 
-describe('Filter: textToXml', function () {
+describe('Filter: text2xml', function () {
 
   // load the controller's module
-  beforeEach(module('xemle.xml'));
+  beforeEach(module('xml2js'));
 
-  var textToXml;
+  var text2xml;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($filter) {
-    textToXml = $filter('textToXml');
+    text2xml = $filter('text2xml');
   }));
 
   it('should parse xml', function () {
-    expect(textToXml('<root><node>Text</node></root>')).toBeTruthy();
+    expect(text2xml('<root><node>Text</node></root>')).toBeTruthy();
   });
 
   describe('xml', function() {
     var xml;
 
     beforeEach(function() {
-      xml = textToXml('<root><node>Text</node></root>');
+      xml = text2xml('<root><node>Text</node></root>');
     });
 
     it('should be a document', function () {
@@ -37,28 +37,28 @@ describe('Filter: textToXml', function () {
   });
 });
 
-describe('Filter: xmlToJson', function () {
-  beforeEach(module('xemle.xml'));
+describe('Filter: xml2js', function () {
+  beforeEach(module('xml2js'));
 
   var doc = '<?xml version="1.0"?><a:propfind xmlns:a="DAV:"><a:prop><a:getcontenttype/></a:prop><a:prop><a:getcontentlength>4711</a:getcontentlength></a:prop></a:propfind>',
-      xmlToJson,
+      xml2js,
       xml;
 
   beforeEach(inject(function ($filter) {
-    xmlToJson = $filter('xmlToJson');
-    xml = $filter('textToXml')(doc);
+    xml2js = $filter('xml2js');
+    xml = $filter('text2xml')(doc);
   }));
 
   it('should convert to JSON', function() {
-    expect(xmlToJson(xml)).toBeTruthy();
-    expect(xmlToJson(xml).propfind).toBeTruthy();
+    expect(xml2js(xml)).toBeTruthy();
+    expect(xml2js(xml).propfind).toBeTruthy();
   });
 
   describe('json propfind', function() {
     var propfind;
 
     beforeEach(function() {
-      propfind = xmlToJson(xml).propfind;
+      propfind = xml2js(xml).propfind;
     });
 
     it('should have proper namespace', function() {

@@ -1,6 +1,6 @@
 # Angular filter to convert text to XML to JSON
 
-This module provides `textToXml` and `xmlToJson` filter for Angular. It uses the
+This module provides `text2xml` and `xml2js` filters for Angular. It uses the
 browser's DOMParser (or XMLDOM ActiveX component in case of IE). There is no
 dependency like X2JS.
 
@@ -84,8 +84,8 @@ Following example shows how to convert a xml response to XML document:
             get: function(path) {
               return $http.get(path).then(function(response) {
                 // check if response data is a XML document
-                if (response.headers('Content-Type').test(/^\w+\/xml/)) {
-                  var xml = $filter('textToXml')(response.data);
+                if (response.headers('Content-Type').match(/^\w+\/xml/)) {
+                  var xml = $filter('text2xml')(response.data);
 
                   response.data = xml;
                 }
@@ -99,7 +99,7 @@ Following example shows how to convert a xml response to XML document:
 
 ## Text to XML to JSON Example
 
-Following example shows how to convert a xml response to JSON object:
+Following example shows how to convert a xml response to javascript object:
 
     angular.module('app', ['xml2js'])
       .factory('service', [
@@ -111,11 +111,11 @@ Following example shows how to convert a xml response to JSON object:
               return $http.get(path).then(function(response) {
 
                 // check if response data is a XML document
-                if (response.headers('Content-Type').test(/^\w+\/xml/)) {
+                if (response.headers('Content-Type').match(/^\w+\/xml/)) {
 
-                  // convert response data to XML to JSON object
-                  var xml = $filter('textToXml')(response.data),
-                      json = $filter('xmlToJson')(xml);
+                  // convert response data to XML to javascript object
+                  var xml = $filter('text2xml')(response.data),
+                      json = $filter('xml2js')(xml);
 
                   response.data = json;
                 }

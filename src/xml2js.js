@@ -1,5 +1,5 @@
 angular.module('xml2js')
-  .filter('xmlToJson', [
+  .filter('xml2js', [
     function() {
 
       // constants

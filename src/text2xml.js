@@ -1,5 +1,5 @@
 angular.module('xml2js', [])
-  .filter('textToXml', [
+  .filter('text2xml', [
     '$window',
     '$log',
     function($window, $log) {
