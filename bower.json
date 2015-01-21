@@ -1,0 +1,33 @@
+{
+  "name": "angular-xml2js",
+  "description": "Angular filters to convert text to xml and xml to javascript object. It uses DOMParser or Microsofts ActiveX DOM parser and has no dependencies but angular",
+  "version": "1.0.0",
+  "main": "dist/angular-xml2js.js",
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "**/.*",
+    "bower_components",
+    "test"
+  ],
+  "keywords": [
+    "angular",
+    "filter",
+    "text",
+    "xml",
+    "json",
+    "js",
+    "convert"
+  ],
+  "authors": [
+    "Xemle <xemle@phtagr.org>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xemle/angular-xml2js.git"
+  },
+  "devDependencies": {
+    "angular": "~1.3.10",
+    "angular-mocks": "~1.3.10"
+  }
+}

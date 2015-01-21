@@ -1,0 +1,42 @@
+{
+  "name": "angular-xml2js",
+  "version": "1.0.0",
+  "description": "Angular filters to convert text to xml and xml to javascript object. It uses DOMParser or Microsofts ActiveX DOM parser and has no dependencies but angular",
+  "keywords": [
+    "angular",
+    "filter",
+    "text",
+    "xml",
+    "json",
+    "js",
+    "convert"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Xemle",
+    "email": "xemle@phtagr.org",
+    "url": "https://twitter.com/xmle"
+  },
+  "main": "dist/angular-xml2js.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/xemle/angular-xml2js.git"
+  },
+  "scripts": {
+    "bootstrap": "npm install -g grunt-cli bower karma-cli",
+    "init": "npm install && bower install",
+    "test": "npm run jshint && npm run unit",
+    "jshint": "grunt jshint",
+    "unit": "karma start --single-run"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0",
+    "jshint-stylish": "~1.0.0",
+    "load-grunt-tasks": "~2.0.0",
+    "grunt-contrib-copy": "~0.7.0",
+    "grunt-contrib-concat": "~0.5.0"
+  }
+}
