@@ -97,7 +97,7 @@ Following example shows how to convert a xml response to XML document:
         }
       ]);
 
-## Text to XML to JSON Example
+## Text to XML to JS Example
 
 Following example shows how to convert a xml response to javascript object:
 
@@ -126,6 +126,15 @@ Following example shows how to convert a xml response to javascript object:
           }
         }
       ]);
+
+## Test
+
+Please install `karma-cli` and all dependencies via `npm install` and `bower install`.
+Then run
+
+    karma start
+
+You might also set the `CHROME_BIN` environment variable.
 
 ## Contribute
 
